@@ -1,0 +1,14 @@
+name: 'GreenPage AI Auditor'
+description: 'Audits your deployment URL for carbon footprint and enforces a budget.'
+author: 'GreenPage Team'
+inputs:
+  url:
+    description: 'The URL to scan (e.g., your Vercel preview URL)'
+    required: true
+  max_budget:
+    description: 'Maximum allowed CO2 per visit (in grams)'
+    required: false
+    default: '1.0'
+runs:
+  using: 'node20'
+  main: 'index.js'
